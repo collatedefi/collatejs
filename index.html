@@ -11,10 +11,22 @@
       border: 1px solid #dddddd;
       text-align: left;
       padding: 8px;
+      font-size: 1.5em;
     }
     
     tr:nth-child(even) {
       background-color: #dddddd;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    p {
+        width:100%;
+        max-width: 450px;
+        color:#666;
+        font-size: 1.5em;
     }
     </style>
 <html>
@@ -24,14 +36,16 @@
             <h1>Collate Finance</h1>
         </div>
         <div style="display:flex;justify-content:center;align-items:center">
-            <p style="width:100%;max-width:600px;color:#666;">Collate Finance creates collateralised assets on the blockchain which are used to 
+            <p>Collate Finance creates collateralised assets on the blockchain which are used to 
                 generate growth for investors by aggregating yields in the decentralised finance ecosystem.</p>
         </div>
         <div style="display:flex;justify-content:center;align-items:center">
-            <p style="width:100%;max-width:600px;color:#666;">It's a mutual fund for Defi.</p>
+            <p>It's a mutual fund for Defi.</p>
         </div>
         <div style="display:flex;justify-content:center;align-items:center">
-            <p style="width:100%;max-width:600px;color:#666;">More information provided in the docs.</p>
+            <p>Read more in the 
+                <a href="https://docs.collate.finance/">docs.</a>
+            </p>
         </div>
         <div style="display:flex;justify-content:center;align-items:center">
             <h1>Stats</h1>
@@ -67,7 +81,7 @@
         <br>
         <br>
         <div style="display:flex;justify-content:center;align-items:center"> 
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+            <canvas id="myChart" style="width:100%;max-width:450px"></canvas>
         </div>
     </body>
 </html>
