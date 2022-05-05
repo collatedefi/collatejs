@@ -25,6 +25,10 @@
         font-size: 1em;
     }
 
+    h1 {
+        padding: 2em;
+    }
+
     </style>
 <html>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -77,13 +81,70 @@
         </div>
         <br>
         <br>
-        <div style="display:flex;justify-content:center;align-items:center;height:300px;padding-left:1em;padding-right:1em;"> 
+        <div style="display:flex;justify-content:center;align-items:center;height:300px;padding:1em;"> 
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
+            <h1>Vaults</h1>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
+            <p>You can independently verify the balance of the Collate assets in the vaults below:</p>
+        </div>
+        <div style="display:flex;justify-content:center;align-items:center;color:#666;padding:1em;">
+            <table>
+                <tr>
+                    <th>Fund</th>
+                    <th>Vault</th>
+                </tr>
+                <tr>
+                    <td>Liquidity</td>
+                    <td>
+                        <a href="https://debank.com/profile/0xd13b8630f26a01d563a9e2a72aa337852a41b714">
+                            Vault One
+                        </a>     
+                    </td>
+                </tr>
+                <tr>
+                    <td>CUSD</td>
+                    <td>
+                        <a href="https://debank.com/profile/0xef2038291016A113f4e556DA2c54A818B848D8Fe">
+                            Vault Two
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>CUSD</td>
+                    <td>
+                        <a href="https://debank.com/profile/0x2dD4eD0268DAd0035D98e6365Dd5160925126229">
+                            Vault Three
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>CUSD</td>
+                    <td>
+                        <a href="https://apeboard.finance/dashboard/GxnfhWpgEWssLnXM5obRf1tAyqzj85GvnerBxqHjLavt">
+                            Vault Four
+                        </a> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>CBTC</td>
+                    <td>
+                        <a href="https://debank.com/profile/0xa0c332F5babfFD35a43Ea194eA3416fd8596a224">
+                            Vault Five
+                        </a> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div style="padding:3em">
+
         </div>
     </body>
 </html>
 <script>
-    var xValues = ["Jul 21","Aug","Sep","Oct","Nov","Dec","Jan","Feb","Mar","Apr 22"];
+    var xValues = ["Jul21","Aug21","Sep21","Oct21","Nov21","Dec21","Jan22","Feb22","Mar22","Apr22"];
     
     Chart.defaults.global.defaultFontFamily = "monospace";
 
