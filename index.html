@@ -1,79 +1,140 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
-    table {
-      font-family: monospace;
-      border-collapse: collapse;
-      width: 100%;
-      max-width:400px;
-    }
-    
-    td, th {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
-    
-    tr:nth-child(even) {
-      background-color: #dddddd;
-    }
+  table {
+    font-family: monospace;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+  }
 
-    p {
-        width:100%;
-        max-width: 600px;
-        color:#666;
-        font-size: 1em;
-    }
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
 
-    h1 {
-        padding-top: 2em;
-        padding-bottom: 2em;
-    }
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
-    </style>
+  p {
+    width: 100%;
+    max-width: 600px;
+    color: #666;
+    font-size: 1em;
+  }
+
+  h1 {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+</style>
 <html>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <body  style="font-family: monospace;">
-        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
-            <h1>Collate Finance</h1>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
-            <p>Collate Finance creates collateralised assets on the blockchain which are used to 
-                generate growth for investors by aggregating yields in the decentralised finance ecosystem.</p>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
-            <p>It's a mutual fund for Defi.</p>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
-            <p>Read more in the 
-                <a href="https://docs.collate.finance/">docs.</a>
-            </p>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
-            <h1>Stats</h1>
-        </div>
-        <div style="display:flex;justify-content:center;align-items:center;color:#666;padding-left:1em;padding-right:1em;">
-            <table>
-                <tr>
-                    <th>Item</th>
-                    <th>Value</th>
-                </tr>
-                <tr>
-                    <td>Collate TVL</td>
-                    <td>$816,776</td>
-                </tr>
-                <tr>
-                    <td>CUSD Price</td>
-                    <td>$1.77</td>
-                </tr>
-            </table>
-        </div>
-        <br>
-        <br>
-        <div style="display:flex;justify-content:center;align-items:center;height:300px;padding:1em;"> 
-            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-        </div>
-        <!-- <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <body style="font-family: monospace">
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+      "
+    >
+      <h1>Collate Finance</h1>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+      "
+    >
+      <p>
+        Collate Finance creates collateralised assets on the blockchain which
+        are used to generate growth for investors by aggregating yields in the
+        decentralised finance ecosystem.
+      </p>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+      "
+    >
+      <p>It's a mutual fund for Defi.</p>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+      "
+    >
+      <p>
+        Read more in the
+        <a href="https://docs.collate.finance/">docs.</a>
+      </p>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        padding-right: 1em;
+      "
+    >
+      <h1>Stats</h1>
+    </div>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #666;
+        padding-left: 1em;
+        padding-right: 1em;
+      "
+    >
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Value</th>
+        </tr>
+        <tr>
+          <td>Collate TVL</td>
+          <td>$816,776</td>
+        </tr>
+        <tr>
+          <td>CUSD Price</td>
+          <td>$1.77</td>
+        </tr>
+      </table>
+    </div>
+    <br />
+    <br />
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        padding: 1em;
+      "
+    >
+      <canvas id="myChart" style="width: 100%; max-width: 600px"></canvas>
+    </div>
+    <!-- <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
             <h1>Vaults</h1>
         </div>
         <div style="display:flex;justify-content:center;align-items:center;padding-left:1em;padding-right:1em;">
@@ -133,54 +194,80 @@
                 </tr>
             </table>
         </div> -->
-        <div style="padding:3em">
-
-        </div>
-    </body>
+    <div style="padding: 3em"></div>
+  </body>
 </html>
 <script>
-    var xValues = ["Jul21","Aug21","Sep21","Oct21","Nov21","Dec21",
-    "Jan22","Feb22","Mar22","Apr22","May22", "Jun22", "Jul22", "Aug22", "Sep22","Oct22","Nov22","Dec22","Jan23"];
-    
-    Chart.defaults.global.defaultFontFamily = "monospace";
+  var xValues = [
+    "Jul21",
+    "Aug21",
+    "Sep21",
+    "Oct21",
+    "Nov21",
+    "Dec21",
+    "Jan22",
+    "Feb22",
+    "Mar22",
+    "Apr22",
+    "May22",
+    "Jun22",
+    "Jul22",
+    "Aug22",
+    "Sep22",
+    "Oct22",
+    "Nov22",
+    "Dec22",
+    "Jan23",
+    "Feb23",
+  ];
 
-    new Chart("myChart", {
+  Chart.defaults.global.defaultFontFamily = "monospace";
+
+  new Chart("myChart", {
     type: "line",
     data: {
-        labels: xValues,
-        datasets: [{ 
-        data: [1.00,1.08,1.15,1.32,1.38,1.43,1.46,1.50,1.59,1.69,1.71, 1.71, 1.74, 1.74, 1.75, 1.76, 1.76, 1.76,1.77],
-        pointRadius: 2,
-        borderColor: "#a8d9f6",
-        backgroundColor: "#a8d9f6",
-        fill: false,
-        label: "CUSD"
-        }]
+      labels: xValues,
+      datasets: [
+        {
+          data: [
+            1.0, 1.08, 1.15, 1.32, 1.38, 1.43, 1.46, 1.5, 1.59, 1.69, 1.71,
+            1.71, 1.74, 1.74, 1.75, 1.76, 1.76, 1.76, 1.77, 1.77,
+          ],
+          pointRadius: 2,
+          borderColor: "#a8d9f6",
+          backgroundColor: "#a8d9f6",
+          fill: false,
+          label: "CUSD",
+        },
+      ],
     },
     options: {
-        maintainAspectRatio: false,
-        legend: {
-            position: "bottom",
-        },
-        scales: {
-            yAxes: [{
-                display: true,
-                stacked: false,
-                gridLines: {
-                    display: false
-                },
-                ticks: {
-                    min: 1,
-                    max: 2,
-                },
-                
-            }],
-            xAxes: [{
-                gridLines: {
-                    display: false
-                },
-            }],
-        }
-    }
-    });
+      maintainAspectRatio: false,
+      legend: {
+        position: "bottom",
+      },
+      scales: {
+        yAxes: [
+          {
+            display: true,
+            stacked: false,
+            gridLines: {
+              display: false,
+            },
+            ticks: {
+              min: 1,
+              max: 2,
+            },
+          },
+        ],
+        xAxes: [
+          {
+            gridLines: {
+              display: false,
+            },
+          },
+        ],
+      },
+    },
+  });
 </script>
